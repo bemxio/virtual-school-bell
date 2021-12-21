@@ -23,6 +23,6 @@ where:
 - `SoundPath` is the path to the sound file to play (e.g. `SoundPath=sounds/default.wav`)
 
 ## running
-to run it, just do it regularily, with `python main.py` (or `python3 main.py`)
+to run it, just do it with `python main.py` (or `python3 main.py`)
 
 if you want to run it in the background, you can use `nohup python3 main.py` (linux only)
