@@ -20,12 +20,13 @@ hours.read("hours.ini")
 # main stuff
 print("Script loaded! Waiting for the next ring hour...")
 while True:
-    now = datetime.now().strftime("%H:%M")
+    now = datetime.now()
+    hour = now.strftime("%H:%M")
 
-    if now in hours:
-        path = hours[now]["SoundPath"]
+    if hour in hours and now.second == 0:
+        path = hours[hour]["SoundPath"]
 
-        print(f"It's {now}! Playing {path} now...\nWaiting for the next ring hour...")
+        print(f"It's {hour}! Playing {path} now...\nWaiting for the next ring hour...")
         play(path)
 
     elif is_pressed(hours["Default"]["InvokeKey"]):
